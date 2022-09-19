@@ -1,17 +1,13 @@
 class Game
-  attr_accessor :current_player, :current_player_name, :current_player_lives, :other_player, :other_player_lives, :player2, :player1
+  attr_accessor :current_player, :player2, :player1
 def initialize
   @current_player = Player1
   @player_1 = Player1
   @player_2 = Player2
-  @other_player = Player2
   @question = nil
-  @current_player_name = @current_player.name
-  @current_player_lives = @current_player.lives
-  @other_player_lives = @other_player.lives
 end
 
-def loop 
+def start_game 
   while @player_1.lives > 0  && @player_2.lives > 0
     @question = Question.new
     puts "----- NEW TURN ----- "
